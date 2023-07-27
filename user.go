@@ -61,12 +61,20 @@ func (k Order) String() string {
 
 // User : backlog user
 type User struct {
-	ID          *int     `json:"id,omitempty"`
-	UserID      *string  `json:"userId,omitempty"`
-	Name        *string  `json:"name,omitempty"`
-	RoleType    RoleType `json:"roleType"`
-	Lang        *string  `json:"lang,omitempty"`
-	MailAddress *string  `json:"mailAddress,omitempty"`
+	ID           *int          `json:"id,omitempty"`
+	UserID       *string       `json:"userId,omitempty"`
+	Name         *string       `json:"name,omitempty"`
+	RoleType     RoleType      `json:"roleType"`
+	Lang         *string       `json:"lang,omitempty"`
+	MailAddress  *string       `json:"mailAddress,omitempty"`
+	NulabAccount *NulabAccount `json:"nulabAccount,omitempty"`
+}
+
+// NulabAccount : ヌーラボID
+type NulabAccount struct {
+	NulabID  *string `json:"nulabId,omitempty"`
+	Name     *string `json:"name,omitempty"`
+	UniqueID *string `json:"uniqueId,omitempty"`
 }
 
 // Notification : -
